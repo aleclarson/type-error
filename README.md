@@ -1,5 +1,9 @@
 # type-error v1.0.0
 
+Create a native `TypeError` object by passing the expected type and the actual value.
+
+*Note:* No validation is done; only type & value formatting.
+
 ```js
 const TypeError = require('type-error');
 
@@ -16,5 +20,5 @@ describing the expected value. The second argument can be anything.
 TypeError(Function, 1)      // 'Expected a function, got a number'
 TypeError(Array, true)      // 'Expected an array, got true'
 TypeError(Number, NaN)      // 'Expected a number, got NaN'
-TypeError('null')           // 'Expected null, got undefined'
+TypeError('null', {})       // 'Expected null, got an object'
 ```
