@@ -1,7 +1,7 @@
 const {toString} = Object.prototype;
 const vowels = /^[aeiou]/i;
 
-const builtin = [Array, Boolean, Date, Error, Function, Number, Object, RegExp, String];
+const builtin = [Array, Boolean, Date, Error, Function, Number, Object, RegExp, String, Symbol];
 if (typeof Buffer == 'function') builtin.push(Buffer);
 
 const _TypeError = TypeError;
