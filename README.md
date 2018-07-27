@@ -1,4 +1,4 @@
-# type-error v1.0.0
+# type-error v1.0.1
 
 Create a native `TypeError` object by passing the expected type and the actual value.
 
