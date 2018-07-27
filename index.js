@@ -8,6 +8,7 @@ const _TypeError = TypeError;
 module.exports = function() {
   const cst = Error.captureStackTrace;
   return function TypeError(type, val) {
+    if (type === undefined) throw Error('Type cannot be undefined');
     if (typeof type != 'string') type = ofType(type);
     const err = _TypeError('Expected ' + type + ', got ' + typeOf(val));
     if (cst) cst(err, TypeError);
